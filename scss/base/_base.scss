@@ -1,5 +1,27 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
 
 body{
     background-color: var.$blue-dark;
+}
+.container {
+  width: 100%;
+  margin-inline: auto;
+
+  /* Mobile (base) */
+  padding-inline: 16px;
+
+  /* Prevent layout breaks */
+  box-sizing: border-box;
+
+  /* Tablet */
+  @include mx.tablet {
+    padding-inline: 32px;
+  }
+
+  /* Desktop */
+  @include mx.desktop {
+    padding-inline: 80px;
+    max-width: 1440px;
+  }
 }
