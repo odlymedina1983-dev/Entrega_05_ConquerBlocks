@@ -1,3 +1,40 @@
-@use "../abstracts/mixins" as mx;
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+@use "../base/typography" as typ;
+
+footer{    
+    background-color: var.$blue-dark;
+    padding-inline: 8px;
+    .footer--container{
+        padding-block: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: space-between;
+        align-items: center;
+        .footer--svg{            
+            display: flex;
+            gap: 32px;
+        }
+        .footer--copyrights{
+            color: var.$color-primary;
+            font-size: 12px;
+            font-family: typ.$font-body;
+        }        
+    }
+
+
+    /* Tablet */
+  @include mx.tablet {        
+    .footer--container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;        
+  }
+  }
+  /* Desktop */
+  @include mx.desktop {    
+    margin: 0 auto;
+  }
+}
 

@@ -145,7 +145,7 @@ button {
 }
 
 body {
-  background-color: #111827;
+  background-color: #0B0F14;
 }
 
 .container {
@@ -258,14 +258,69 @@ header .header--container .btn:focus-visible {
   }
 }
 @media (min-width: 768px) {
-  header {
-    padding-inline: 32px;
+  header .header--container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header--container .header__logo {
+    flex-shrink: 0;
+  }
+  header .header--container .header--nav {
+    align-self: auto;
+    flex: 0 0 55%;
+  }
+  header .header--container .header--nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .header--container .header--nav ul .header--list .header--link {
+    font-size: 16px;
   }
 }
 @media (min-width: 1440px) {
   header {
-    padding-inline: 80px;
-    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #111827;
+  padding-inline: 8px;
+  /* Tablet */
+  /* Desktop */
+}
+footer .footer--container {
+  padding-block: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer--container .footer--svg {
+  display: flex;
+  gap: 32px;
+}
+footer .footer--container .footer--copyrights {
+  color: #E5E7EB;
+  font-size: 12px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+@media (min-width: 768px) {
+  footer .footer--container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  footer {
+    margin: 0 auto;
   }
 }
 

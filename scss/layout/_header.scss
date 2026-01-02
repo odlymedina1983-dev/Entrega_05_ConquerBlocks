@@ -62,13 +62,36 @@ header{
 
 
     /* Tablet */
-  @include mx.tablet {
-    padding-inline: 32px;
+  @include mx.tablet {        
+    .header--container{
+        .header__logo{
+            flex-shrink: 0;
+        }
+        width: 100%;
+        display: flex;
+        flex-direction: row;  
+        align-items: center; 
+        justify-content: space-between;
+        .header--nav{
+            align-self: auto;
+            flex: 0 0 55%;            
+            ul{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .header--list{
+                    .header--link{
+                        font-size: 16px;
+                    }
+                }                
+            }
+        }     
+    }
   }
 
   /* Desktop */
-  @include mx.desktop {
-    padding-inline: 80px;
-    max-width: 1440px;
+  @include mx.desktop {    
+    margin: 0 auto;
   }
 }
