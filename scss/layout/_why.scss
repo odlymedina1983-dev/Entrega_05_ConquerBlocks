@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+@use "../base/typography" as typ;
+
+.why--container{
+    margin-block: 32px;
+    margin-bottom: 64px;
+    .why--card{
+        @include mx.yellow--glow;
+        margin-inline: 16px;
+        overflow: hidden;
+        box-sizing: border-box;        
+        border: solid 2px var.$orange-details;        
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        .why--image {
+            width: 100%;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+            }
+        }
+        .why--text{
+            padding: 16px;
+            padding-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            p {                
+                color: var.$color-primary;
+                span{
+                    color: var.$orange-details;
+                }
+            }
+            .btn{
+                @include mx.btn-primary;
+            }
+        }
+    }
+
+
+
+        /* Tablet */
+  @include mx.tablet {        
+    .why--card{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        .why--text{
+            padding: 16px;
+            margin-left: 16px;
+            flex: 1;
+        }
+        .why--image{
+            flex: 1;
+            height: auto;
+            display: block;
+        }
+    }            
+  }
+  
+  /* Desktop */
+  @include mx.desktop {    
+    
+  }
+}

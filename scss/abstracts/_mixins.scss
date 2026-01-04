@@ -80,3 +80,11 @@ $bp-mobile: 375px;
       inset 0 1px 0 rgba(255, 255, 255, 0.45);
   }
 }
+
+/*--------mixin sombra amarilla*-----*/
+
+@mixin yellow--glow {
+  box-shadow: 
+    6px 8px 20px rgba(255, 193, 7, 0.45),
+    6px 8px 40px rgba(255, 193, 7, 0.35);
+}

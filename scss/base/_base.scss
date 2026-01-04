@@ -4,6 +4,12 @@
 body{
     background-color: var.$black;
 }
+.break--word{
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  white-space: normal;
+}
 .container {
   width: 100%;
   margin-inline: auto;
