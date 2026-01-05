@@ -1,3 +1,128 @@
-@use "../abstracts/mixins" as mx;
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+@use "../base/typography" as typ;
+
+.course--wrapper{
+    position: relative;
+    overflow: hidden;
+    padding-block: 64px;
+    background-color: var.$black;    
+    &::before{
+     content: "";
+        position: absolute;
+        inset: 0;
+        background: url("../../img/courses-texture/texture-lastCourses.jpg") center/cover no-repeat;
+        opacity: .35;                
+        mix-blend-mode: lighten; 
+        z-index: 0;
+        filter: brightness(1.15) contrast(1.8);     
+        pointer-events: none;   
+    }
+    .course--container{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 32px;
+        padding-block: 0;
+        h2{
+            color: var.$color-primary;
+            text-align: center;
+            margin-bottom: 32px;
+            span{
+                color: var.$yellow;
+            }
+        }
+        .course--cards{
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
+            gap: 32px;
+            .card{
+                background-color: rgba(var.$blue-dark, 0.45);                
+                border-radius: 50px;
+                padding: 32px;
+                align-self: center;
+                @include mx.yellow--glow;
+                @include mx.yellow--stroke;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                .course--header{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    align-items: center;
+                    img{
+                        width: 120px;
+                        object-fit: contain;
+                    }
+                }
+            }
+            h3{
+                color: var.$color-primary;
+                text-align: center;
+                span{
+                    color: var.$yellow;
+                }
+            }
+            p{
+              color: var.$color-primary;
+              text-align: center;
+            }
+            a{
+                @include mx.btn-primary;
+            }
+        }
+    }
+
+
+            /* Tablet */
+  @include mx.tablet {        
+     .course--container{
+        .course--cards{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            .card{
+                .course--header{
+                    img{
+                        width: 120px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+     }          
+  }
+  
+  /* Desktop */
+  @include mx.desktop {    
+    .course--container{
+        align-items: center;
+        .course--cards{
+            .card{
+                .course--header{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;                    
+                    h3{
+                        text-align: left;
+                        font-size: 32px;
+                    }
+                    img{
+                        width: 150px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+     } 
+  }
+}
 

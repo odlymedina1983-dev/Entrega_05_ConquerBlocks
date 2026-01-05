@@ -85,6 +85,9 @@ $bp-mobile: 375px;
 
 @mixin yellow--glow {
   box-shadow: 
-    6px 8px 20px rgba(255, 193, 7, 0.45),
-    6px 8px 40px rgba(255, 193, 7, 0.35);
+    6px 8px 10px rgba(255, 193, 7, 0.45),
+    6px 8px 20px rgba(255, 193, 7, 0.35);
+}
+@mixin yellow--stroke {
+  border: solid 2px var.$orange-details; 
 }
