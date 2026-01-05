@@ -27,9 +27,129 @@
 </head>  
 
 <body>
-   <main>
+  <header>
+        <div class="header--container container">
+          <picture class="header__logo">
+            <!-- Desktop -->
+            <source media="(min-width: 1440px)" srcset="img\desktop\ConquerBlocks_logo_desktop.png"/>
 
-   </main>  
+            <!-- Tablet -->
+            <source media="(min-width: 768px)" srcset="img\tablet\ConquerBlocks_logo_tablet.png"/>
+
+            <!-- Mobile (fallback) -->
+            <img src="img/mobile/ConquerBlocks_logo_mobile.png" alt="ConquerBlocks Academy logo" width="auto" height="auto" />
+          </picture>
+          <nav class="header--nav">
+            <ul>
+              <li class="header--list"><a href="index.html" class="header--link">Home</a></li>
+              <li class="header--list"><a href="who_we_are.html" class="header--link">Who we are</a></li>
+              <li class="header--list"><a href="courses.html" class="header--link">Courses</a></li>
+              <li class="header--list"><a href="blog.html" class="header--link">Blog</a></li>
+              <li class="header--list"><a href="register.html" class="header--link">Register</a></li>
+              <li class="header--list"><a href="login.html" class="header--link">Login</a></li>
+            </ul>
+          </nav>
+          <button class="btn">Contact us</button>
+        </div>
+              
+    </header> 
+   <main>
+    <div class="who--container container">
+      <h3 class="who--slogan">
+        Who <span>we are?</span>  
+      </h3>
+      <div class="who--heroe">
+        <picture class="who--heroe-img">
+          <!-- Desktop -->
+          <source media="(min-width: 1440px)" srcset="img\desktop\who--heroe-desktop.png"/>
+
+          <!-- Tablet -->
+          <source media="(min-width: 768px)" srcset="img\tablet\who--heroe-tablet.png"/>
+
+          <!-- Mobile (fallback) -->
+          <img src="img\mobile\who--heroe-mobile.jpg" alt="ConquerBlocks Academy logo" width="auto" height="auto" />
+        </picture>
+        <div class="who--heroe-text">
+          <p class="text">
+            At <span>ConquerBlocks ACADEMY,</span> we are a community of educators, 
+            developers, and technology enthusiasts who share a common 
+            mission: to turn learning into a practical, fun, and 
+            transformative experience.
+            We believe that anyone can learn to code with clear guidance, 
+            real-world projects, and the support of a community that 
+            encourages steady, step-by-step progress. That’s why we design 
+            each course with a progressive methodology: first we understand, 
+            then we practice, and finally we create.<br>
+            Our team combines academic and professional experience to deliver 
+            up-to-date content in areas such as web development, data analysis, 
+            artificial intelligence, and automation, helping students build 
+            skills that are truly relevant in today’s world.
+          </p>
+          <a href="contact.html" class="btn">Contact us</a>
+        </div>
+      </div>
+      <div class="who--content">
+        <h3>Our <span>values</span></h3>
+        <ul class="who--list">
+          <li class="items"><span>Learning by doing:</span> each lesson includes real-world exercises or projects.</li>
+          <li class="items"><span>Community:</span>we believe knowledge grows when it is shared.</li>
+          <li class="items"><span>Continuous innovation:</span> we update our content every academic cycle</li>
+          <li class="items"><span>Accessibility:</span> technology education for everyone, without barriers.</li>
+        </ul>
+        <h3 class="text--generic">Our <span>history</span></h3>
+        <p>
+          <span>CONQUERblocks ACADEMY</span> was founded in 2022 as an independent initiative by a group of programmers 
+          who were looking for a more practical and approachable way to teach technology. We started by sharing free 
+          resources and soon grew into an international online learning community.
+          Today, we remain faithful to that purpose: teaching programming from scratch with a human, collaborative, 
+          and future-focused approach.
+        </p>
+        <p class="text--registration">Do you want to be part of our community?<br> Visit our <a class="link" href="register.html"><span>Registration</span> </a> section and take the first step.</p>
+      </div>
+    </div>
+
+   </main> 
+   <footer>
+      <div class="footer--container container">
+        <picture class="footer--logo">
+          <!-- Desktop -->
+          <source media="(min-width: 1440px)" srcset="img\desktop\footer_logo_desktop.png"/>
+
+          <!-- Tablet -->
+          <source media="(min-width: 768px)" srcset="img\tablet\footer_logo_tablet.png"/>
+
+          <!-- Mobile (fallback) -->
+          <img src="img\mobile\footer_logo_mobile.png" alt="ConquerBlocks Academy logo" width="auto" height="auto" />
+        </picture>
+        <div class="footer--svg">
+          <svg width="47" height="35" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d_38_114)">
+              <path d="M38.5059 10.9672C38.3029 10.1564 37.8897 9.41357 37.3077 8.81366C36.7258 8.21375 35.9959 7.77803 35.1917 7.55051C32.2534 6.83301 20.5 6.83301 20.5 6.83301C20.5 6.83301 8.74671 6.83301 5.80837 7.61884C5.00417 7.84636 4.27425 8.28209 3.69234 8.88199C3.11043 9.4819 2.69714 10.2247 2.49421 11.0355C1.95645 14.0175 1.6934 17.0425 1.70837 20.0726C1.68921 23.1255 1.95227 26.1736 2.49421 29.178C2.71793 29.9636 3.14048 30.6782 3.72104 31.2527C4.30159 31.8273 5.02053 32.2424 5.80837 32.458C8.74671 33.2438 20.5 33.2438 20.5 33.2438C20.5 33.2438 32.2534 33.2438 35.1917 32.458C35.9959 32.2305 36.7258 31.7948 37.3077 31.1949C37.8897 30.5949 38.3029 29.8521 38.5059 29.0413C39.0395 26.0818 39.3025 23.0798 39.2917 20.0726C39.3109 17.0197 39.0478 13.9716 38.5059 10.9672Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.6563 25.6588L26.4792 20.0726L16.6563 14.4863V25.6588Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <filter id="filter0_d_38_114" x="-4" y="0" width="49" height="49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_38_114"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_38_114" result="shape"/>
+              </filter>
+              </defs>
+          </svg>
+          <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.9999 2.66699H19.9999C18.2318 2.66699 16.5361 3.36937 15.2859 4.61961C14.0356 5.86986 13.3333 7.56555 13.3333 9.33366V13.3337H9.33325V18.667H13.3333V29.3337H18.6666V18.667H22.6666L23.9999 13.3337H18.6666V9.33366C18.6666 8.98004 18.8071 8.6409 19.0571 8.39085C19.3072 8.1408 19.6463 8.00033 19.9999 8.00033H23.9999V2.66699Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="26.67" height="26.67" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.6667 7H21.68M7.66667 1H21C24.6819 1 27.6667 3.98477 27.6667 7.66667V21C27.6667 24.6819 24.6819 27.6667 21 27.6667H7.66667C3.98477 27.6667 1 24.6819 1 21V7.66667C1 3.98477 3.98477 1 7.66667 1ZM19.6667 13.4933C19.8312 14.603 19.6417 15.7363 19.125 16.732C18.6083 17.7278 17.7909 18.5352 16.7888 19.0396C15.7868 19.5439 14.6513 19.7195 13.5437 19.5412C12.4362 19.363 11.413 18.8401 10.6198 18.0469C9.82656 17.2537 9.30364 16.2305 9.12542 15.123C8.9472 14.0154 9.12275 12.8799 9.6271 11.8778C10.1314 10.8758 10.9389 10.0583 11.9346 9.54165C12.9304 9.02499 14.0637 8.83545 15.1733 9C16.3052 9.16785 17.3531 9.69528 18.1623 10.5044C18.9714 11.3135 19.4988 12.3614 19.6667 13.4933Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        </div>
+        <div class="footer--copyrights">
+          <p>© 2023 - All rights reserved</p>
+        </div>
+      </div>
+     
+    </footer> 
 </body>
 
 </html>
