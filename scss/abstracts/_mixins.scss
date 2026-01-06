@@ -91,3 +91,6 @@ $bp-mobile: 375px;
 @mixin yellow--stroke {
   border: solid 2px var.$orange-details; 
 }
+@mixin muted--stroke {
+  border: solid 2px var.$text-muted; 
+}
