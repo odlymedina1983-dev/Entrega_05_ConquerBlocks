@@ -55,9 +55,59 @@
   </header> 
 
   <main>
+    <div class="register--container">
+      <form class="register--form" action="#" method="post">
+        <h3>Register</h3>
 
+        <div class="form--field">
+          <label class="visually--void" for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full_name" placeholder="Full name here:">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="birth-date">Birth-Date</label>
+          <input type="text" id="birth-date" name="birth-date" placeholder="Birth-Date:">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email: example@abc.com">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="pass">Password</label>
+          <input type="password" id="pass" name="pass" placeholder="Password:">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="pass-confirm">Confirm Password</label>
+          <input type="password" id="pass-confirm" name="pass-confirm" placeholder="Confirm Password">
+        </div>
+
+        <div class="form--space">
+          <p class="ad-info">Additional Information:</p>
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Address:"></textarea>
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="web">Website</label>
+          <input type="text" id="web" name="web" placeholder="Website:www.example.com">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="bio">Biography</label>
+          <textarea id="bio" name="bio" placeholder="Biography(less than 100 char.):" maxlength="100"></textarea>
+        </div>
+
+        <button type="submit" href="index.html" class="btn">Send</button>
+      </form>
+    </div>
   </main> 
-  
+
   <footer>
       <div class="footer--container container">
         <picture class="footer--logo">
