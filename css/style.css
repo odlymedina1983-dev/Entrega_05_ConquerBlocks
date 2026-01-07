@@ -1484,5 +1484,53 @@ footer .footer--container .footer--copyrights {
   }
 }
 
+/* ABSTRACTS (variables mixins)*/
+.page--login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.page--login header {
+  width: 100%;
+}
+.page--login main {
+  flex: 1;
+}
+.page--login footer {
+  width: 100%;
+}
+.page--login footer .footer--container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 80px;
+}
+.page--login .register--container {
+  padding-inline: 32px;
+  /* Tablet */
+  /* Desktop */
+}
+.page--login .register--container .register--form {
+  padding: 32px;
+}
+.page--login .register--container .register--form::before {
+  content: "";
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  width: 80%;
+  height: 60%;
+  background-image: url("../../img/mobile/heroe_texture_mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .page--login .register--container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
 /*   THEMES    */
 /*  VENDORS    codigo de terceros*//*# sourceMappingURL=style.css.map */

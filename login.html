@@ -25,7 +25,7 @@
       
             
 </head>  
-<body>
+<body class="page--login">
   <header>
         <div class="header--container container">
           <picture class="header__logo">
@@ -54,11 +54,30 @@
   </header> 
 
   <main>
+    <div class="register--container">
+      <form class="register--form form--before" action="#" method="post">
+        <h3>Login</h3>
+
+        <div class="form--field">
+          <label class="visually--void" for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email: example@abc.com">
+        </div>
+
+        <div class="form--field">
+          <label class="visually--void" for="pass">Password</label>
+          <input type="password" id="pass" name="pass" placeholder="Password:">
+        </div>
+
+
+        <button type="submit" href="index.html" class="btn">Send</button>
+
+      </form>
+    </div> 
 
   </main> 
 
   <footer>
-      <div class="footer--container container">
+      <div class="footer--container">
         <picture class="footer--logo">
           <!-- Desktop -->
           <source media="(min-width: 1440px)" srcset="img\desktop\footer_logo_desktop.png"/>

@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+@use "../base/typography" as typ;
+
+.page--login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    header{
+        width: 100%;
+    }
+    main{
+        flex: 1;
+    }
+    footer{
+        width: 100%;
+        .footer--container{
+            max-width: 1440px;
+            margin: 0 auto;
+            padding-inline: 80px;
+        }
+    }
+    .register--container{
+        padding-inline: 32px;
+        .register--form{
+            padding: 32px;
+            &::before{
+                content: "";        
+                position: absolute;
+                right: 10%;
+                top: 10%;
+                width: 80%;
+                height: 60%;
+                background-image: url("../../img/mobile/heroe_texture_mobile.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: -1;
+            }
+        }
+                /* Tablet */
+    @include mx.tablet {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+  
+    /* Desktop */
+    @include mx.desktop {    
+    
+    }
+    
+    }
+
+
+
+        
+
+}
+
