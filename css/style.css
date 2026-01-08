@@ -1054,6 +1054,189 @@ footer .footer--container .footer--copyrights {
 }
 
 /* ABSTRACTS (variables mixins)*/
+.contact--container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+  /* Tablet */
+  /* Desktop */
+}
+.contact--container .staff--container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact--container .staff--container .staff--img > img {
+  border-radius: 25px;
+  border: solid 2px #FF8A00;
+  box-shadow: 6px 8px 10px rgba(255, 193, 7, 0.45), 6px 8px 20px rgba(255, 193, 7, 0.35);
+  width: 100%;
+}
+.contact--container .staff--container .staff--slogan {
+  color: #E5E7EB;
+}
+.contact--container .staff--container .staff--slogan span {
+  color: #F4B400;
+}
+.contact--container .staff--container .instructions {
+  color: #E5E7EB;
+  text-align: left;
+}
+.contact--container .staff--container .instructions span {
+  color: #F4B400;
+}
+.contact--container .location--container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+}
+.contact--container .location--container .map--container:has(.map:target:not(.is--default)) .is--default {
+  display: none;
+}
+.contact--container .location--container .map--container .map {
+  overflow: hidden;
+  display: none;
+  border-radius: 25px;
+  border: solid 2px #FF8A00;
+  box-shadow: 6px 8px 10px rgba(255, 193, 7, 0.45), 6px 8px 20px rgba(255, 193, 7, 0.35);
+  height: 260px;
+}
+.contact--container .location--container .map--container .map iframe {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact--container .location--container .map--container .map:target {
+  display: block;
+}
+.contact--container .location--container .map--container .is--default {
+  display: block;
+}
+.contact--container .location--container .map--text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact--container .location--container .map--text::before {
+  content: "";
+  position: absolute;
+  right: -20%;
+  top: 50%;
+  width: 80%;
+  height: 60%;
+  background-image: url("../../img/mobile/heroe_texture_mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+.contact--container .location--container .map--text .header--locations {
+  color: #E5E7EB;
+  text-align: center;
+}
+.contact--container .location--container .map--text .header--locations span {
+  color: #F4B400;
+}
+.contact--container .location--container .map--text .location--list {
+  list-style: decimal;
+  padding-inline: 16px;
+}
+.contact--container .location--container .map--text .location--list .locations {
+  color: #E5E7EB;
+  font-size: 12px;
+  line-height: 180%;
+}
+.contact--container .location--container .map--text .location--list .locations a {
+  text-decoration: none;
+}
+.contact--container .location--container .map--text .location--list .locations a span {
+  color: #F4B400;
+}
+.contact--container .location--container .map--text .location--list .locations a:hover {
+  color: #F4B400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+@media (min-width: 768px) {
+  .contact--container {
+    padding-inline: 56px;
+    margin-top: 64px;
+  }
+  .contact--container .staff--container {
+    margin-bottom: 64px;
+  }
+  .contact--container .staff--container .staff--slogan {
+    font-size: 36px;
+  }
+  .contact--container .staff--container .instructions {
+    font-size: 24px;
+  }
+  .contact--container .location--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 64px;
+  }
+  .contact--container .location--container .map--container {
+    flex: 0 0 60%;
+  }
+  .contact--container .location--container .map--container .map {
+    height: 300px;
+  }
+  .contact--container .location--container .map--container .map iframe {
+    height: 300px;
+  }
+  .contact--container .location--container .map--text {
+    flex: 0 0 40%;
+    align-self: flex-start;
+  }
+  .contact--container .location--container .map--text::before {
+    right: -20%;
+    top: 40%;
+    width: 80%;
+    height: 60%;
+  }
+  .contact--container .location--container .map--text .header--locations {
+    font-size: 24px;
+    text-align: left;
+  }
+  .contact--container .location--container .map--text .location--list .locations {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .contact--container {
+    padding-inline: 96px;
+  }
+  .contact--container .location--container .map--container .map {
+    height: 350px;
+  }
+  .contact--container .location--container .map--container .map iframe {
+    height: 350px;
+  }
+  .contact--container .location--container .map--text::before {
+    right: -20%;
+    top: 60%;
+    width: 100%;
+    height: 80%;
+  }
+  .contact--container .location--container .map--text .header--locations {
+    font-size: 30px;
+  }
+  .contact--container .location--container .map--text .location--list .locations {
+    font-size: 18px;
+  }
+}
+
+/* ABSTRACTS (variables mixins)*/
 .courses--container {
   display: flex;
   flex-direction: column;

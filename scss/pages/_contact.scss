@@ -1,0 +1,199 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mx;
+@use "../base/typography" as typ;
+
+.contact--container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+    .staff--container{        
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .staff--img > img{
+            border-radius: 25px;
+            @include mx.yellow--stroke;
+            @include mx.yellow--glow;
+            width: 100%;
+        }
+        .staff--slogan{
+            color: var.$color-primary;
+            span{
+                color: var.$yellow;
+            }
+        }
+        .instructions{
+            color: var.$color-primary;
+            text-align: left;
+            span{
+                color: var.$yellow;
+            }
+        }        
+    }
+    .location--container{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+        .map--container:has(.map:target:not(.is--default)) .is--default { 
+            display: none; 
+        }
+        .map--container{            
+            .map{                
+                overflow: hidden;
+                display: none;
+                border-radius: 25px;
+                @include mx.yellow--stroke;
+                @include mx.yellow--glow;
+                height: 260px;
+                iframe {
+                    display: block;
+                    width: 100%;
+                    height: 260px;
+                    border: 0;
+                    object-fit: cover;
+                }
+                &:target{
+                    display: block;
+                }            
+            }
+            .is--default{
+                display: block;
+            }
+        }
+        .map--text{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            &::before{
+            content: "";        
+            position: absolute;
+            right: -20%;
+            top: 50%;
+            width: 80%;
+            height: 60%;
+            background-image: url("../../img/mobile/heroe_texture_mobile.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            }
+            .header--locations{
+                color: var.$color-primary;
+                text-align: center;
+                span{
+                    color: var.$yellow;
+                } 
+            }
+            .location--list{
+                list-style: decimal;
+                padding-inline: 16px;
+                .locations{
+                    color: var.$color-primary;
+                    font-size: 12px;
+                    line-height: 180%;
+                    a{
+                        text-decoration: none;
+                        span{
+                            color: var.$yellow;
+                        }
+                        &:hover{
+                            color: var.$yellow;
+                            text-decoration: underline;
+                            text-underline-offset: 4px;
+                            text-decoration-thickness: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+                /* Tablet */
+    @include mx.tablet {        
+        padding-inline: 56px;
+        margin-top: 64px;
+        .staff--container{
+            margin-bottom: 64px;
+            .staff--slogan{
+                font-size: 36px;
+            }
+            .instructions{
+                font-size: 24px;
+            }
+        }
+        .location--container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+            margin-bottom: 64px;
+            .map--container{
+                flex: 0 0 60%;
+                .map{
+                    height: 300px;
+                    iframe{
+                        height: 300px;
+                    }
+                }
+            }            
+            .map--text{
+                flex: 0 0 40%;
+                align-self: flex-start;
+                &::before{                    
+                    right: -20%;
+                    top: 40%;
+                    width: 80%;
+                    height: 60%;                    
+                }
+                .header--locations{
+                    font-size: 24px;
+                    text-align: left;                    
+                }
+                .location--list{
+                    .locations{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }   
+    
+
+        /* Desktop */
+     @include mx.desktop {    
+        padding-inline: 96px;
+        .location--container{
+            .map--container{
+                .map{
+                    height: 350px;
+                    iframe{
+                        height: 350px;
+                    }
+                }
+            }
+            .map--text{
+                &::before{                    
+                    right: -20%;
+                    top: 60%;
+                    width: 100%;
+                    height: 80%;
+                    
+                }
+                .header--locations{
+                    font-size: 30px;
+                }
+                .location--list{
+                    .locations{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

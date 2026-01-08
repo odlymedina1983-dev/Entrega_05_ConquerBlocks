@@ -39,22 +39,18 @@
                 z-index: -1;
             }
         }
-                /* Tablet */
-    @include mx.tablet {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-  
-    /* Desktop */
-    @include mx.desktop {    
+                    /* Tablet */
+        @include mx.tablet {
+            max-width: 600px;
+            margin: 0 auto;
+        }
     
-    }
-    
-    }
-
-
-
+        /* Desktop */
+        @include mx.desktop {    
         
+        }
+    
+    }       
 
 }
 
